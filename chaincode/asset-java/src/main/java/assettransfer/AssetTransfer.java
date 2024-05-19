@@ -59,7 +59,7 @@ public final class AssetTransfer implements ContractInterface {
 
         Create(ctx, "asset1", "Parul", "Admin@123", 123451, "1000");
         Create(ctx, "asset2", "Kapil", "Kapil@123", 123452, "800");
-        Create(ctx, "asset3", "Rahul", "Rahul@123", 123453, "Transaction Id:RahCSJM1261, Validation  Code:VALID, Payload Proposal: Rahul1261, Creator MSP :Csjmu1MSP, Endoser:{ Csjmu1MSP,Csjmu2MSP,Csjmu3MSP,Csjmu4MSP,Csjmu5MSP, Csjmu6MSP, ,Csjmu7MSP}, Chaincode name : Project chain, Type: CLIENT TRANSACTION");
+        Create(ctx, "asset3", "Rahul", "Rahul@123", 123453, "700");
         Create(ctx, "asset4", "Navneet", "Navneet@123", 123454, "600");
         Create(ctx, "asset5", "Pooja", "Pooja123", 123455, "700");
         Create(ctx, "asset6", "Alok", "Alok@123", 123456, "600");
