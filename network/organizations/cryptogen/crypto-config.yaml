@@ -1,0 +1,20 @@
+##### Orderer for csjmu
+OrdererOrgs:
+  - Name: Orderer
+    Domain: csjmu.com
+    EnableNodeOUs: true
+    Specs:
+      - Hostname: orderer
+        SANS:
+          - localhost
+      
+#### Peers for csjmu
+PeerOrgs:
+  # Peer configuration for csjmu
+  - Name: csjmu
+    Domain: csjmu.com
+    EnableNodeOUs: true
+    Template:
+      Count: 3
+    Users:
+      Count: 2    

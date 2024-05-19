@@ -1,0 +1,41 @@
+name: network
+version: 1.0.0
+client:
+  organization: csjmu
+  connection:
+    timeout:
+      peer:
+        endorser: 300
+organizations:
+  csjmu:
+    mspid: csjmuMSP
+    peers:
+      - peer${PEER}.csjmu.com
+    certificateAuthorities:
+      - ca.csjmu.com
+    orderers:
+      - orderer.csjmu.com
+peers:
+  peer${PEER}.csjmu.com:
+    url: grpcs://localhost:${P0PORT}
+    tlsCACerts:
+      pem: |
+        ${PEERPEM}
+    grpcOptions:
+      ssl-target-name-override: peer${PEER}.csjmu.com
+      hostnameOverride: peer${PEER}.csjmu.com
+orderers:
+  orderer.csjmu.com:
+    url: grpcs://localhost:7050
+    tlsCACerts:
+      pem: |
+        ${ORDERERPEM}
+certificateAuthorities:
+  ca.csjmu.com:
+    url: https://localhost:${CAPORT}
+    caName: ca-csjmu
+    tlsCACerts:
+      pem: |
+        ${CAPEM}
+    httpOptions:
+      verify: false
